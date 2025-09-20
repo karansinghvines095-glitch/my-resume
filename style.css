@@ -1,0 +1,109 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6EE7B7, #3B82F6, #9333EA); /* multi-color gradient */
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;  /* smooth animated background */
+  color: #fff;
+}
+
+/* Header Bar Styling */
+.header {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(10, 26, 90, 0.9);   /* dark transparent blue bar */
+  backdrop-filter: blur(10px);          /* glass effect */
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  animation: fadeDown 2s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.name {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #60A5FA, #F472B6, #FACC15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* gradient text */
+}
+
+.tagline {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #A5B4FC;
+  font-weight: 500;
+}
+
+.contact {
+  font-size: 1rem;
+  color: #E0E7FF;
+}
+
+/* Card Section */
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 25px auto;
+  padding: 25px;
+  max-width: 850px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  animation: fadeUp 1.5s ease;
+  backdrop-filter: blur(15px);
+  color: #fff;
+}
+
+.card h2 {
+  border-left: 5px solid #60A5FA;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Skills styling */
+.skills li {
+  display: inline-block;
+  background: linear-gradient(135deg, #2563EB, #9333EA);
+  color: white;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+
+.skills li:hover {
+  transform: scale(1.15) rotate(2deg);
+  background: linear-gradient(135deg, #F43F5E, #F59E0B);
+  box-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(10, 26, 90, 0.95);
+  color: #E0E7FF;
+  border-top: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(50px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
